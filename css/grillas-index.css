@@ -5,11 +5,16 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
+        "menu"
         "inicio"
         "documentacion"
         "interes"
         "servicios";
     text-align: center;
+}
+
+.pagina_menu {
+    grid-area: menu;
 }
 
 .pagina__inicio {
@@ -28,22 +33,108 @@
     grid-area: servicios;
 }
 
-/*.inicio__contenedor, .documentacion__contenedor, .interes__contenedor, .servicios__contenedor{
-    
-}*/
-
 .inicio__contenido,
 .documentacion__contenido,
 .interes__contenido,
 .servicios__contenido {
     display: flex;
     flex-direction: column;
-    border: 2px solid #000;
 }
 
 @media only screen and (max-width: 600px) {
 
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+
+
+
+    .menu-principal__contenido {
+        background-color: #131417;
+        align-items: center;
+        height: 10vh;
+        display: flex;
+        justify-content: end;
+            padding: 0px 40px 0px 40px;
+
+    }
+
+    .menu-principal__item{
+        color: white;
+    }
+
+    .inicio__contenido {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "parrafo"
+            "imagen"
+            "boton";
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .inicio-titulo {
+        grid-area: titulo;
+    }
+
+    .inicio-imagen {
+        grid-area: imagen;
+
+    }
+
+    .inicio-parrafo {
+        grid-area: parrafo;
+    }
+
+    .inicio-boton {
+        grid-area: boton;
+    }
+
+    .inicio__titulo {
+        font-size: 2em;
+    }
+
+    .inicio__subtitulo {
+        font-size: 1.3em;
+        font-weight: lighter;
+    }
+
+    .inicio__imagen {
+        height: auto;
+        width: 100%;
+        box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 30%);
+    }
+
+    .inicio-imagen {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inicio-boton {
+        background-color: #efe9f4;
+        display: grid;
+        height: 50px;
+        width: 200px;
+        border-radius: 5px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inicio__link {
+        color: black;
+        text-decoration: none;
+        font-size: 1.2em;
+        text-transform: capitalize;
+    }
+
     .interes__contenedor {
+        display: grid;
         grid-template-areas:
             "titulo"
             "tarjeta1"
@@ -53,6 +144,8 @@
 
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        padding: 20px;
+        row-gap: 10px;
     }
 
     .interes__titulo {
