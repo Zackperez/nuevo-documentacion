@@ -1,0 +1,88 @@
+@import url(normalize.css);
+
+.pagina__contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "inicio"
+        "documentacion"
+        "interes"
+        "servicios";
+    text-align: center;
+}
+
+.pagina__inicio {
+    grid-area: inicio;
+}
+
+.pagina__documentacion {
+    grid-area: documentacion;
+}
+
+.pagina__interes {
+    grid-area: interes;
+}
+
+.pagina__servicios {
+    grid-area: servicios;
+}
+
+/*.inicio__contenedor, .documentacion__contenedor, .interes__contenedor, .servicios__contenedor{
+    
+}*/
+
+.inicio__contenido,
+.documentacion__contenido,
+.interes__contenido,
+.servicios__contenido {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .interes__contenedor {
+        grid-template-areas:
+            "titulo"
+            "tarjeta1"
+            "tarjeta2"
+            "tarjeta3"
+            "tarjeta4";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .interes__titulo {
+        grid-area: titulo;
+    }
+
+    .tarjeta1 {
+        grid-area: tarjeta1;
+    }
+
+    .tarjeta2 {
+        grid-area: tarjeta2;
+    }
+
+    .tarjeta3 {
+        grid-area: tarjeta3;
+    }
+
+    .tarjeta4 {
+        grid-area: tarjeta4;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
