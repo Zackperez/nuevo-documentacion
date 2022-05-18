@@ -1,15 +1,83 @@
 @import url(normalize.css);
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
 
-*{
+* {
     font-family: 'Heebo', sans-serif;
-    color: #252830
+    color: #252830;
+}
 
+.menu-principal__item {
+    padding-left: 15px;
+    text-align: center;
+}
+
+.menu-principal__item a {
+    text-decoration: none;
+    color: #252830;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 0px 10px 5px 10px;
+}
+
+.menu-principal__item a:hover {
+    border-bottom: 2px solid #000;
+}
+
+/* Seccion inicio */
+
+.inicio__titulo {
+    font-size: 4.5em;
+}
+
+.inicio__subtitulo {
+    width: 50vw;
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 0px 0px 30px 0px;
+}
+
+.inicio-boton {
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #131417;
+    font-size: 1.4em;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    background-color: #efe9f4;
+}
+
+.inicio__link:hover {
+    border: 2px solid rgb(231, 231, 231);
+    background-color: rgb(231, 231, 231);
+}
+
+.inicio__link {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.inicio__imagen {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Seccion inicio FIN */
+
+.documentacion__imagen1, .documentacion__imagen2{
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 60%);
 }
 
 /* Seccion de intereses INICIO*/
 
-.tarjeta{
+.tarjeta {
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
     padding: 10px 0px 20px 0px;
     display: grid;
@@ -17,19 +85,20 @@
     border-radius: 6px;
 }
 
-.tarjeta__titulo{
+.tarjeta__titulo {
     font-size: 1.6em;
 }
 
 .tarjeta__parrafo {
     font-size: 1.2em;
+    text-align: center;
 }
 
 .tarjeta__cuerpo {
-    padding: 0px 10px 0px 20px;
+    padding: 10px 20px 10px 20px;
 }
 
-.tarjeta-final{
+.tarjeta-final {
     background-color: #252830;
     display: grid;
     height: 50px;
@@ -39,28 +108,36 @@
     text-align: center;
 }
 
-.tarjeta:hover{
+.tarjeta:hover {
     background-color: #efe9f4;
 }
 
-.tarjeta-final a{
+.tarjeta-final a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
     text-transform: capitalize;
 }
+
 /* Seccion de intereses FIN*/
 
 
 
 
 @media only screen and (max-width: 600px) {
-    *{
-        font-size: 16px;
 
+    .inicio__titulo {
+        font-size: 3em;
+        padding: 0px;
     }
+
+    .inicio__subtitulo {
+        font-size: 1.3em;
+        font-weight: lighter;
+        width: auto;
+        padding: 0px;
+    }
+
+
+
 }
-
-
-
-

@@ -1,24 +1,26 @@
 @import url(normalize.css);
 
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
 .pagina__contenedor {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
     grid-template-areas:
-        "menu"
         "inicio"
         "documentacion"
         "interes"
         "servicios";
-    text-align: center;
-}
-
-.pagina_menu {
-    grid-area: menu;
+    grid-template-rows:auto;
+    grid-template-columns: 1fr;
 }
 
 .pagina__inicio {
     grid-area: inicio;
+    height: 100vh ;
 }
 
 .pagina__documentacion {
@@ -33,21 +35,45 @@
     grid-area: servicios;
 }
 
-.inicio__contenido,
-.documentacion__contenido,
-.interes__contenido,
-.servicios__contenido {
+.inicio__contenido {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "subtitulo"
+        "boton"
+        "imagen";
+    text-align: center;
+    justify-items: center;
+}
+
+.menu-principal__contenido {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+.inicio-titulo {
+    grid-area: titulo;
+}
+
+.inicio-parrafo {
+    grid-area: subtitulo;
+}
+
+.inicio-boton {
+    grid-area: boton;
+}
+
+.inicio-imagen {
+    grid-area: imagen;
+    margin-top: 20px;
+    padding: 20px 0px 20px 0px;
 }
 
 @media only screen and (max-width: 600px) {
-
-    *{
-        padding: 0px;
-        margin: 0px;
-    }
-
 
 
     .menu-principal__contenido {
@@ -56,8 +82,7 @@
         height: 10vh;
         display: flex;
         justify-content: end;
-            padding: 0px 40px 0px 40px;
-
+        padding: 0px 40px 0px 40px;
     }
 
     .menu-principal__item{
@@ -72,8 +97,6 @@
             "imagen"
             "boton";
         height: 80vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
         justify-items: center;
         align-items: center;
         padding: 20px;
@@ -85,7 +108,6 @@
 
     .inicio-imagen {
         grid-area: imagen;
-
     }
 
     .inicio-parrafo {
@@ -96,41 +118,48 @@
         grid-area: boton;
     }
 
-    .inicio__titulo {
-        font-size: 2em;
-    }
-
-    .inicio__subtitulo {
-        font-size: 1.3em;
-        font-weight: lighter;
-    }
-
-    .inicio__imagen {
-        height: auto;
-        width: 100%;
-        box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 30%);
-    }
-
     .inicio-imagen {
         display: flex;
         justify-content: center;
     }
 
-    .inicio-boton {
-        background-color: #efe9f4;
+    .documentacion__contenedor{
         display: grid;
-        height: 50px;
-        width: 200px;
-        border-radius: 5px;
-        align-items: center;
-        text-align: center;
+        grid-template-areas: 
+        "titulo1"
+        "imagen1"
+        "texto1"
+        "titulo2"
+        "imagen2"
+        "texto2";
+        justify-items: center;
+        padding: 20px;
     }
 
-    .inicio__link {
-        color: black;
-        text-decoration: none;
-        font-size: 1.2em;
-        text-transform: capitalize;
+    .documentacion-titulo1{
+        grid-area: titulo1;
+    }
+
+    .documentacion-subtitulo1{
+        grid-area: texto1;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .documentacion-imagen1{
+        grid-area: imagen1;
+    }
+
+    .documentacion-titulo2{
+        grid-area: titulo2;
+    }
+
+    .documentacion-subtitulo2{
+        grid-area: texto2;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .documentacion-imagen2{
+        grid-area: imagen2; 
     }
 
     .interes__contenedor {
@@ -141,9 +170,6 @@
             "tarjeta2"
             "tarjeta3"
             "tarjeta4";
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
         padding: 20px;
         row-gap: 10px;
     }
